@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Task</title>
+  <!-- Bootstrap Library -->
+  <link rel="stylesheet" href="css/bootstrap_5.3.2.min.css">
+  <!-- Monserrat & Cairo Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Fontawesome Icons -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Slick Slider -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'
+    integrity='sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=='
+    crossorigin='anonymous' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'
+    integrity='sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=='
+    crossorigin='anonymous' />
+  <!-- Css Style file -->
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kaf.net">
+  <meta property="og:image" content="images/main-logo.png">
+  <meta property="og:description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,">
+  <meta property="og:site_name" content="KAF">
+  <meta name="twitter:card"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,">
+  <meta name="twitter:site" content="@kafofficial">
+  <meta name="twitter:creator" content="@kafofficial">
+  <meta name="twitter:image" content=images/main-logo.png>
+  <meta name="twitter:title"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet," />
+  <meta name="twitter:description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,">
+  <meta name="application-name" content="KAF">
+  <meta name="msapplication-TileImage" content="images/main-logo.png">
+  <meta name="msapplication-TileColor" content="#1DBF73">
+  <meta name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet">
+</head>
+
+<body>
+
+  <!-- Main wrapper start -->
+  <div id="main-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="javascript:void(0)" aria-label="Our Logo">
+          <img src="images/main-logo.png" alt="Our Logo">
+        </a>
+        <div class="btn-group d-flex align-items-center">
+          <button class="bg-transparent me-2 d-lg-none" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-label="User info">
+            <img class="user-avatar" src="images/posteravatar.png" alt="User Avatar">
+          </button>
+          <a class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </a>
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="custom-list">
+                    <div class="row px-2">
+                      <div class="col-2 d-flex align-items-center">
+                        <img class="user-avatar" src="images/posteravatar.png" alt="User Avatar">
+                      </div>
+                      <div class="col-10 d-flex flex-column justify-content-center">
+                        <span><b>Ahmed Ali</b></span>
+                        <small class="text-grey">Student</small>
+                      </div>
+                    </div>
+                    <hr>
+                    <a class="dropdown-item" href="javascript:void(0)" aria-label="My Profile"> <i
+                        class="fa-regular fa-circle-user"></i>
+                      My Profile
+                    </a>
+                    <hr>
+                    <a class="dropdown-item d-flex justify-content-between" href="javascript:void(0)"
+                      aria-label="Dark Mode">
+                      <span>
+                        <i class="fa-regular fa-moon me-1"></i>
+                        Dark Mode
+                      </span>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input dark-mode-switch" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                      </div>
+                    </a>
+                    <div class="dropdown-submenu  d-flex justify-content-between">
+                      <a class="dropdown-item" href="javascript:void(0)" aria-label="Language">
+                        <i class="fa-solid fa-language"></i>
+                        Language</a>
+                      <a class="dropdown-item text-end d-block" data-bs-toggle="dropdown" href="javascript:void(0)"
+                        aria-label="Arabic Language">العربية <img src="images/arabic.png"
+                          alt="Arabic Language Logo"></a>
+                      <ul class="dropdown-menu custom-list w-auto">
+                        <li>
+                          <a class="dropdown-item" href="javascript:void(0)" aria-label="English Language">English <img
+                              src="images/english.png" alt="English Language"></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="javascript:void(0)" aria-label="French Language">French <img
+                              src="images/italy.png" alt="Italy Language"></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <a class="dropdown-item" href="javascript:void(0)" aria-label="Acoount Settings">
+                      <i class="fa-solid fa-gear"></i>
+                      Acoount Settings</a>
+                    <hr>
+                    <a class="dropdown-item text-danger" href="javascript:void(0)" aria-label="Logout">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      Logout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="javascript:void(0)" aria-label="Auctions Page">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Auctions
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Contests Page">
+                <i class="fa-solid fa-trophy"></i>
+                Contests
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Project Page">
+                <i class="fa-solid fa-briefcase"></i>
+                Project
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Portfolios Page">
+                <i class="fa-regular fa-image"></i>
+                Portfolios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Freelancers Page">
+                <i class="fa-solid fa-users"></i>
+                Freelancers
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Forum Page">
+                <i class="fa-regular fa-comments"></i>
+                Forum
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn position-relative" data-bs-toggle="dropdown" data-bs-display="static"
+                aria-expanded="false">
+                <i class="icon fa-regular fa-comment-dots"></i>
+                <span class="top-0 position-absolute translate-middle badge rounded-pill notification-counter">
+                  5+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end custom-list w-auto">
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Message">Menu item</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Message">Menu item</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Message">Menu item</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn position-relative" data-bs-toggle="dropdown" data-bs-display="static"
+                aria-expanded="false">
+                <i class="icon fa-regular fa-bell"></i>
+                <span class="top-0 position-absolute translate-middle badge rounded-pill notification-counter">
+                  10
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end custom-list w-auto">
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Notification">Menu item</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Notification">Menu item</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" aria-label="Notification">Menu item</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn" data-bs-auto-close="outside" data-bs-toggle="dropdown"
+                data-bs-display="static" aria-expanded="false" aria-label="User info">
+                <img class="user-avatar" src="images/posteravatar.png" alt="User Avatar">
+              </button>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end custom-list">
+                <div class="row px-2">
+                  <div class="col d-flex align-items-center">
+                    <img class="user-avatar" src="images/posteravatar.png" alt="User Avatar">
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <span><b>Ahmed Ali</b></span>
+                    <small class="text-grey">Student</small>
+                  </div>
+                </div>
+                <hr>
+                <a class="dropdown-item" href="javascript:void(0)" aria-label="My Profile"> <i
+                    class="fa-regular fa-circle-user"></i>
+                  My Profile</a>
+                <hr>
+                <a class="dropdown-item d-flex justify-content-between" href="javascript:void(0)"
+                  aria-label="Dark Mode">
+                  <span>
+                    <i class="fa-regular fa-moon me-1"></i>
+                    Dark Mode
+                  </span>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input dark-mode-switch" type="checkbox" role="switch" id="darkModeSwitch">
+                    <label class="form-check-label" for="darkModeSwitch"></label>
+                  </div>
+                </a>
+                <div class="dropdown-submenu dropend d-flex justify-content-between">
+                  <a class="dropdown-item" href="javascript:void(0)" aria-label="Language">
+                    <i class="fa-solid fa-language"></i>
+                    Language</a>
+                  <a class="dropdown-item text-end d-block" data-bs-toggle="dropdown" href="javascript:void(0)"
+                    aria-label="Arabic Language">العربية <img src="images/arabic.png" alt="Arabic Language Logo"></a>
+                  <ul class="dropdown-menu custom-list w-auto">
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0)" aria-label="English Language">English <img
+                          src="images/english.png" alt="English Language"></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0)" aria-label="French Language">French <img
+                          src="images/italy.png" alt="Italy Language"></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <a class="dropdown-item" href="javascript:void(0)" aria-label="Acoount Settings">
+                  <i class="fa-solid fa-gear"></i>
+                  Acoount Settings</a>
+                <hr>
+                <a class="dropdown-item text-danger" href="javascript:void(0)" aria-label="Logout">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-start d-block d-lg-none" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <img class="offcanvas-title" src="images/main-logo.png" alt="Our Logo">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item my-2">
+              <a class="nav-link active" aria-current="page" href="javascript:void(0)" aria-label="Auctions Page">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Auctions
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Contests Page">
+                <i class="fa-solid fa-trophy"></i>
+                Contests
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Project Page">
+                <i class="fa-solid fa-briefcase"></i>
+                Project
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Portfolios Page">
+                <i class="fa-regular fa-image"></i>
+                Portfolios
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Freelancers Page">
+                <i class="fa-solid fa-users"></i>
+                Freelancers
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="javascript:void(0)" aria-label="Forum Page">
+                <i class="fa-regular fa-comments"></i>
+                Forum
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Content body start -->
+    <div class="content-body">
+      <span class="noto">Url Copied</span>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <!-- Hero Section  -->
+            <section id="hero-section">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="text-decoration-none" href="javascript:void(0)"
+                      aria-label="Homepage">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Logo Design</li>
+                </ol>
+              </nav>
+              <h1>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                amet,
+              </h1>
+              <div class="d-flex justify-content-between rate-wrapper">
+                <div class="rating">
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="star fa-solid fa-star"></i>
+                  <span>4.1 (500)</span>
+                </div>
+                <div class="share-links">
+                  <a href="javascript:void(0)" aria-label="Share Section">
+                    <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Design Share Icon">
+                      <path
+                        d="M18.625 17.8612C17.9996 17.861 17.3805 17.9863 16.8045 18.2296C16.2284 18.473 15.7069 18.8295 15.2711 19.278L9.86876 15.8057C10.2937 14.716 10.2937 13.5064 9.86876 12.4166L15.2711 8.94438C16.0826 9.77561 17.1738 10.2759 18.3332 10.3483C19.4926 10.4207 20.6375 10.06 21.5461 9.33619C22.4547 8.61236 23.0621 7.57694 23.2507 6.43069C23.4392 5.28444 23.1954 4.10902 22.5665 3.13231C21.9376 2.15561 20.9685 1.4472 19.847 1.14444C18.7255 0.841673 17.5315 0.966124 16.4966 1.49366C15.4616 2.0212 14.6594 2.91424 14.2455 3.99964C13.8316 5.08504 13.8354 6.28548 14.2563 7.36821L8.85391 10.8405C8.20337 10.1726 7.36843 9.71388 6.45583 9.52298C5.54324 9.33208 4.59444 9.41767 3.73074 9.76879C2.86704 10.1199 2.12766 10.7206 1.60713 11.4941C1.0866 12.2677 0.808563 13.1788 0.808563 14.1112C0.808563 15.0435 1.0866 15.9547 1.60713 16.7282C2.12766 17.5017 2.86704 18.1024 3.73074 18.4536C4.59444 18.8047 5.54324 18.8903 6.45583 18.6994C7.36843 18.5085 8.20337 18.0498 8.85391 17.3819L14.2563 20.8541C13.8943 21.7876 13.8408 22.8124 14.1034 23.7784C14.3661 24.7445 14.9311 25.6011 15.7158 26.2228C16.5005 26.8445 17.4637 27.1986 18.4642 27.2334C19.4647 27.2681 20.4501 26.9815 21.276 26.4157C22.1019 25.8499 22.725 25.0345 23.054 24.089C23.3829 23.1434 23.4005 22.1174 23.1042 21.1611C22.8078 20.2049 22.2131 19.3686 21.4071 18.7748C20.6011 18.181 19.6261 17.8608 18.625 17.8612ZM18.625 2.86118C19.1813 2.86118 19.725 3.02613 20.1875 3.33517C20.6501 3.64421 21.0105 4.08346 21.2234 4.59738C21.4363 5.1113 21.492 5.6768 21.3835 6.22237C21.2749 6.76794 21.0071 7.26908 20.6137 7.66241C20.2204 8.05575 19.7193 8.32361 19.1737 8.43213C18.6281 8.54066 18.0626 8.48496 17.5487 8.27209C17.0348 8.05922 16.5955 7.69873 16.2865 7.23622C15.9775 6.7737 15.8125 6.22994 15.8125 5.67368C15.8125 4.92775 16.1088 4.21238 16.6363 3.68494C17.1637 3.15749 17.8791 2.86118 18.625 2.86118ZM5.50001 16.9237C4.94375 16.9237 4.39998 16.7587 3.93747 16.4497C3.47495 16.1406 3.11447 15.7014 2.9016 15.1875C2.68872 14.6736 2.63303 14.1081 2.74155 13.5625C2.85007 13.0169 3.11793 12.5158 3.51127 12.1224C3.9046 11.7291 4.40574 11.4612 4.95132 11.3527C5.49689 11.2442 6.06239 11.2999 6.5763 11.5128C7.09022 11.7256 7.52947 12.0861 7.83852 12.5486C8.14756 13.0111 8.31251 13.5549 8.31251 14.1112C8.31251 14.8571 8.01619 15.5725 7.48875 16.0999C6.9613 16.6274 6.24593 16.9237 5.50001 16.9237ZM18.625 25.3612C18.0687 25.3612 17.525 25.1962 17.0625 24.8872C16.6 24.5781 16.2395 24.1389 16.0266 23.625C15.8137 23.1111 15.758 22.5456 15.8666 22C15.9751 21.4544 16.2429 20.9533 16.6363 20.5599C17.0296 20.1666 17.5307 19.8987 18.0763 19.7902C18.6219 19.6817 19.1874 19.7374 19.7013 19.9503C20.2152 20.1631 20.6545 20.5236 20.9635 20.9861C21.2726 21.4486 21.4375 21.9924 21.4375 22.5487C21.4375 23.2946 21.1412 24.01 20.6137 24.5374C20.0863 25.0649 19.3709 25.3612 18.625 25.3612Z"
+                        fill="#8692A6" />
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" aria-label="Like Section">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Design Like Icon">
+                      <path
+                        d="M20.8594 3.86133C18.4395 3.86133 16.3207 4.90195 15 6.66094C13.6793 4.90195 11.5605 3.86133 9.14062 3.86133C7.21433 3.8635 5.36755 4.62968 4.00545 5.99178C2.64335 7.35388 1.87717 9.20066 1.875 11.127C1.875 19.3301 14.0379 25.9699 14.5559 26.2441C14.6924 26.3176 14.845 26.356 15 26.356C15.155 26.356 15.3076 26.3176 15.4441 26.2441C15.9621 25.9699 28.125 19.3301 28.125 11.127C28.1228 9.20066 27.3566 7.35388 25.9946 5.99178C24.6325 4.62968 22.7857 3.8635 20.8594 3.86133ZM15 24.3457C12.8602 23.0988 3.75 17.4188 3.75 11.127C3.75186 9.69784 4.3204 8.3278 5.33093 7.31726C6.34147 6.30673 7.71151 5.73819 9.14062 5.73633C11.4199 5.73633 13.3336 6.95039 14.1328 8.90039C14.2034 9.07234 14.3236 9.21941 14.478 9.32291C14.6324 9.42641 14.8141 9.48167 15 9.48167C15.1859 9.48167 15.3676 9.42641 15.522 9.32291C15.6764 9.21941 15.7966 9.07234 15.8672 8.90039C16.6664 6.94688 18.5801 5.73633 20.8594 5.73633C22.2885 5.73819 23.6585 6.30673 24.6691 7.31726C25.6796 8.3278 26.2481 9.69784 26.25 11.127C26.25 17.4094 17.1375 23.0977 15 24.3457Z"
+                        fill="#8692A6" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="hero-slider">
+                <div class="slick-slider">
+                  <div class="slide"><img src="images/main.png" alt="Hero section slide"></div>
+                  <div class="slide"><img src="images/main.png" alt="Hero section slide"></div>
+                  <div class="slide"><img src="images/main.png" alt="Hero section slide"></div>
+                </div>
+                <div class="custom-arrow prev"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="custom-arrow next"><i class="fa-solid fa-angle-left"></i></div>
+              </div>
+            </section>
+            <!-- Description section -->
+            <div class="description-section my-1 my-lg-5">
+              <h2 class="main-h2">Description</h2>
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                  amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor
+                  sit amet,.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Diam nisi, cras neque Lorem ipsum dolor sit amet</p>
+              </div>
+            </div>
+            <!-- Services Add-Ons -->
+            <div class="services-section my-4 my-lg-5">
+              <div class="header">
+                <h2 class="main-h2 m-0">Service Add-Ons</h2>
+                <div class="services-check-section mt-3 mt-md-0">
+                  <input type="checkbox" class="btn-check" id="servicesCheck" autocomplete="">
+                  <label class="btn light-grey d-flex align-items-center" id="servicesCheckLabel" for="servicesCheck"><i
+                      class="mx-1 fa-regular fa-circle-check"></i> Select All</label>
+                </div>
+              </div>
+              <div class="service">
+                <div class="form-check d-flex">
+                  <input class="form-check-input service-check" type="checkbox" id="service1" value="">
+                  <label class="form-check-label" for="service1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+                    dolor sit amet, Lorem ipsum dolor sit amet
+                  </label>
+                </div>
+                <div class="badges-wrapper">
+                  <span class="badge">$100</span>
+                  <span class="badge">2 days</span>
+                </div>
+              </div>
+              <div class="service">
+                <div class="form-check d-flex">
+                  <input class="form-check-input service-check" type="checkbox" value="" id="service2" checked>
+                  <label class="form-check-label" for="service2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+                    dolor sit amet, Lorem ipsum dolor sit amet
+                  </label>
+                </div>
+                <div class="badges-wrapper">
+                  <span class="badge">$100</span>
+                  <span class="badge">2 days</span>
+                </div>
+              </div>
+              <div class="service">
+                <div class="form-check d-flex">
+                  <input class="form-check-input service-check" type="checkbox" id="service3" value="">
+                  <label class="form-check-label" for="service3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+                    dolor sit amet, Lorem ipsum dolor sit amet
+                  </label>
+                </div>
+                <div class="badges-wrapper">
+                  <span class="badge">$100</span>
+                  <span class="badge">2 days</span>
+                </div>
+              </div>
+            </div>
+            <!-- Purchase section -->
+            <div class="purchase-section my-4 my-lg-5">
+              <h2 class="main-h2">Purchase Service</h2>
+              <div class="price-counter section-style-1 ">
+                <div class="counter">
+                  <button class="minus" aria-label="Decrease the value of the price"><i
+                      class="fa-solid fa-minus"></i></button>
+                  <input class="number" type="number" id="quantity" value="1" min="1" disabled
+                    aria-label="Services Counter">
+                  <button class="plus" aria-label="Increase the price value"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="total-price">$<span id="total">100</span></div>
+                <a class="main-btn purchase-btn" href="javascript:void(0)" aria-label="Purchase button">Purchase</a>
+              </div>
+            </div>
+            <!-- Rating Section -->
+            <div class="rating-section my-4 my-lg-5">
+              <h2 class="main-h2"><i class="gold-star fa-solid fa-star"></i> 4.6 Service Rating . 46 Ratings</h2>
+              <div class="rates-wrapper section-style-1">
+                <div class="rate-row">
+                  <h3>Work Quality <i class="gold-star fa-solid fa-star"></i> 5.0</h3>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                  </div>
+                  <div class="progress" style="height: 6px;">
+                    <div class="progress-bar" role="progressbar" aria-label="Rate progress" style="width: 80%;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="f-500 rate-number">4</span>
+                </div>
+                <div class="rate-row">
+                  <h3>Communication & Collaboration <i class="gold-star fa-solid fa-star"></i> 5.0</h3>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                  </div>
+                  <div class="progress" style="height: 6px;">
+                    <div class="progress-bar" role="progressbar" aria-label="Rate progress" style="width: 80%;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="f-500 rate-number">4</span>
+                </div>
+                <div class="rate-row">
+                  <h3>Adherence to Schedule <i class="gold-star fa-solid fa-star"></i> 5.0</h3>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                  </div>
+                  <div class="progress" style="height: 6px;">
+                    <div class="progress-bar" role="progressbar" aria-label="Rate progress" style="width: 80%;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="f-500 rate-number">4</span>
+                </div>
+              </div>
+            </div>
+            <!-- Comments Section -->
+            <div class="comments-section section-style-1">
+              <div class="comment">
+                <img src="images/posteravatar-2.png" alt="User Image">
+                <div class="info">
+                  <h4>Jane Smith</h4>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <span class="comment-time">. 30m</span>
+                  </div>
+                  <p class="comment-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                    amet,Lorem ipsum dolor sit amet, consectetur adipiscing elit.... Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit....
+                  </p>
+                </div>
+              </div>
+              <div class="comment">
+                <img src="images/posteravatar-2.png" alt="User Image">
+                <div class="info">
+                  <h4>Jane Smith</h4>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <span class="comment-time">. 30m</span>
+                  </div>
+                  <p class="comment-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                    amet,Lorem ipsum dolor sit amet, consectetur adipiscing elit.... Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit....
+                  </p>
+                </div>
+              </div>
+              <div class="comment">
+                <img src="images/posteravatar-2.png" alt="User Image">
+                <div class="info">
+                  <h4>Jane Smith</h4>
+                  <div class="rating">
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="gold-star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <span class="comment-time">. 30m</span>
+                  </div>
+                  <p class="comment-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                    amet,Lorem ipsum dolor sit amet, consectetur adipiscing elit.... Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit....
+                  </p>
+                </div>
+              </div>
+              <div class="comment">
+                <img src="images/posteravatar.png" alt="User Image">
+                <div class="">
+                  <form action="" method="POST">
+                    <textarea class="form-control new-comment-area" name="" id="" cols="30" rows="5"
+                      placeholder="Write your review in here"></textarea>
+                    <button class="main-btn mt-3" type="submit">Post Review</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <section class="seller-card section-style-1 section-padding mt-4 mt-lg-0">
+              <h3 class="main-h3">Seller</h3>
+              <div class="seller-photo">
+                <img src="images/seller.png" class=" card-img-top" alt="Seller Photo">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Jane Smith
+                  <!-- Verify Icon -->
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.8808 6.22953C14.6157 5.9525 14.3415 5.66703 14.2381 5.41602C14.1425 5.18609 14.1369 4.805 14.1312 4.43586C14.1207 3.74961 14.1095 2.97195 13.5687 2.43125C13.028 1.89055 12.2504 1.8793 11.5641 1.86875C11.195 1.86312 10.8139 1.8575 10.584 1.76187C10.3337 1.65852 10.0475 1.3843 9.77047 1.11922C9.28531 0.653047 8.73406 0.125 8 0.125C7.26594 0.125 6.71539 0.653047 6.22953 1.11922C5.9525 1.3843 5.66703 1.65852 5.41602 1.76187C5.1875 1.8575 4.805 1.86312 4.43586 1.86875C3.74961 1.8793 2.97195 1.89055 2.43125 2.43125C1.89055 2.97195 1.88281 3.74961 1.86875 4.43586C1.86312 4.805 1.8575 5.18609 1.76187 5.41602C1.65852 5.66633 1.3843 5.9525 1.11922 6.22953C0.653047 6.71469 0.125 7.26594 0.125 8C0.125 8.73406 0.653047 9.28461 1.11922 9.77047C1.3843 10.0475 1.65852 10.333 1.76187 10.584C1.8575 10.8139 1.86312 11.195 1.86875 11.5641C1.8793 12.2504 1.89055 13.028 2.43125 13.5687C2.97195 14.1095 3.74961 14.1207 4.43586 14.1312C4.805 14.1369 5.18609 14.1425 5.41602 14.2381C5.66633 14.3415 5.9525 14.6157 6.22953 14.8808C6.71469 15.347 7.26594 15.875 8 15.875C8.73406 15.875 9.28461 15.347 9.77047 14.8808C10.0475 14.6157 10.333 14.3415 10.584 14.2381C10.8139 14.1425 11.195 14.1369 11.5641 14.1312C12.2504 14.1207 13.028 14.1095 13.5687 13.5687C14.1095 13.028 14.1207 12.2504 14.1312 11.5641C14.1369 11.195 14.1425 10.8139 14.2381 10.584C14.3415 10.3337 14.6157 10.0475 14.8808 9.77047C15.347 9.28531 15.875 8.73406 15.875 8C15.875 7.26594 15.347 6.71539 14.8808 6.22953ZM11.2105 6.71047L7.27297 10.648C7.22073 10.7003 7.15869 10.7418 7.0904 10.7701C7.02212 10.7984 6.94892 10.8129 6.875 10.8129C6.80108 10.8129 6.72788 10.7984 6.6596 10.7701C6.59131 10.7418 6.52927 10.7003 6.47703 10.648L4.78953 8.96047C4.68398 8.85492 4.62469 8.71177 4.62469 8.5625C4.62469 8.41323 4.68398 8.27008 4.78953 8.16453C4.89508 8.05898 5.03823 7.99969 5.1875 7.99969C5.33677 7.99969 5.47992 8.05898 5.58547 8.16453L6.875 9.45477L10.4145 5.91453C10.4668 5.86227 10.5288 5.82081 10.5971 5.79253C10.6654 5.76424 10.7386 5.74969 10.8125 5.74969C10.8864 5.74969 10.9596 5.76424 11.0279 5.79253C11.0962 5.82081 11.1582 5.86227 11.2105 5.91453C11.2627 5.96679 11.3042 6.02884 11.3325 6.09712C11.3608 6.1654 11.3753 6.23859 11.3753 6.3125C11.3753 6.38641 11.3608 6.4596 11.3325 6.52788C11.3042 6.59616 11.2627 6.65821 11.2105 6.71047Z"
+                      fill="#1DBF73" />
+                  </svg>
+                </h5>
+                <!-- Seller Location -->
+                <span class="text-grey location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Cairo, Egypt
+                </span>
+                <div class="rating">
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="gold-star fa-solid fa-star"></i>
+                  <i class="star fa-solid fa-star"></i>
+                  <span>4.1 (500)</span>
+                </div>
+                <div class="seller-info">
+                  <a href="javascript:void(0)" aria-label="Achievements Link">
+                    <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Achievements">
+                      <path
+                        d="M18.0938 9.37522C18.0946 7.92698 17.7295 6.50201 17.0322 5.23267C16.3349 3.96332 15.3282 2.89077 14.1055 2.11464C12.8828 1.33851 11.4838 0.883975 10.0384 0.793249C8.59297 0.702522 7.14809 0.978549 5.83792 1.59569C4.52776 2.21283 3.39481 3.15107 2.5443 4.32327C1.69379 5.49546 1.15331 6.86358 0.973069 8.30056C0.792825 9.73754 0.97866 11.1968 1.51331 12.5427C2.04797 13.8886 2.91409 15.0776 4.03125 15.9992V23.4377C4.03116 23.571 4.06514 23.702 4.12997 23.8184C4.1948 23.9348 4.28832 24.0327 4.40164 24.1028C4.51497 24.1728 4.64433 24.2128 4.77743 24.2187C4.91054 24.2247 5.04296 24.1966 5.16211 24.1369L9.5 21.9729L13.8389 24.1418C13.9476 24.1939 14.0669 24.2203 14.1875 24.219C14.3947 24.219 14.5934 24.1367 14.7399 23.9901C14.8864 23.8436 14.9688 23.6449 14.9688 23.4377V15.9992C15.9462 15.1942 16.7334 14.1827 17.2737 13.0375C17.814 11.8922 18.094 10.6415 18.0938 9.37522ZM2.46875 9.37522C2.46875 7.98457 2.88113 6.62515 3.65373 5.46887C4.42633 4.31258 5.52447 3.41137 6.80926 2.87919C8.09405 2.34701 9.5078 2.20777 10.8717 2.47907C12.2357 2.75038 13.4885 3.42004 14.4718 4.40338C15.4552 5.38671 16.1248 6.63956 16.3961 8.00349C16.6675 9.36742 16.5282 10.7812 15.996 12.066C15.4639 13.3508 14.5626 14.4489 13.4064 15.2215C12.2501 15.9941 10.8907 16.4065 9.5 16.4065C7.63583 16.4044 5.84861 15.6629 4.53044 14.3448C3.21227 13.0266 2.47082 11.2394 2.46875 9.37522ZM4.03125 9.37522C4.03125 8.2936 4.35199 7.23628 4.9529 6.33695C5.55382 5.43761 6.40792 4.73667 7.4072 4.32275C8.40648 3.90884 9.50607 3.80054 10.5669 4.01155C11.6277 4.22256 12.6022 4.74341 13.367 5.50823C14.1318 6.27305 14.6527 7.24749 14.8637 8.30832C15.0747 9.36915 14.9664 10.4687 14.5525 11.468C14.1386 12.4673 13.4376 13.3214 12.5383 13.9223C11.6389 14.5232 10.5816 14.844 9.5 14.844C8.05007 14.8424 6.65998 14.2657 5.63472 13.2405C4.60947 12.2152 4.0328 10.8251 4.03125 9.37522Z"
+                        fill="#1DBF73" />
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" aria-label="logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  </a>
+                  <a href="javascript:void(0)" aria-label="Seller card link">
+                    <i class="fa-solid fa-address-card"></i>
+                  </a>
+                </div>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="javascript:void(0)" class="main-btn">Contact Me</a>
+              </div>
+            </section>
+            <section class="service-info-card section-style-1 section-padding">
+              <h3 class="main-h3">Info</h3>
+              <div class="info">
+                <span><i class="fa-solid fa-circle-dollar-to-slot"></i> Price</span>
+                $10
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-clock"></i> Delivery Duration</span>
+                1 day
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-cart-flatbed"></i> In Progress Orders</span>
+                2
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-user-group"></i> Customers</span>
+                2
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-percent"></i> Sales</span>
+                $25
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-list-ul"></i> Category</span>
+                Design
+              </div>
+              <div class="info">
+                <span><i class="fa-solid fa-list-ul"></i> Subcategory</span>
+                Logo Design
+              </div>
+            </section>
+            <section class="share-card section-style-1 section-padding">
+              <h3 class="main-h3">Share & Earn</h3>
+              <div class="social-share">
+                <a class="linked-in" href="" aria-label="Share Page on Linked-In">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a class="facebook" href="" aria-label="Share Page on Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="whatsapp" href="" aria-label="Share Page on Whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a class="twitter" href="" aria-label="Share Page on Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <button class="url-copy" aria-label="Copy Url Link">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </section>
+            <section class="other-services section-style-1 section-padding">
+              <div class="header mb-4">
+                <h3 class="main-h3">Seller Other Services</h3>
+                <a class="text-grey text-decoration-none f-500" href="javascript:void(0)"
+                  aria-label="See All Seller Services">See more</a>
+              </div>
+              <div class="services-wrapper">
+                <div class="service">
+                  <div class="card">
+                    <div class="row g-0">
+                      <div class="col-12 col-sm-4 col-lg-12 col-xl-4">
+                        <div class="service-img" data-img="images/service-img.png"></div>
+                      </div>
+                      <div class="col-12 col-sm-8 col-lg-12 col-xl-8">
+                        <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-grey f-500">
+                              <i class="gold-star fa-solid fa-star"></i>
+                              4.9 (50)
+                            </span>
+                            <span class="service-discount f-700">
+                              <i class="discount-icon fa-solid fa-tag"></i>
+                              $10
+                            </span>
+                            <a class="service-like">
+                              <i class="liked fa-solid fa-heart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="card">
+                    <div class="row g-0">
+                      <div class="col-12 col-sm-4 col-lg-12 col-xl-4">
+                        <div class="service-img" data-img="images/service-img.png"></div>
+                      </div>
+                      <div class="col-12 col-sm-8 col-lg-12 col-xl-8">
+                        <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-grey f-500">
+                              <i class="gold-star fa-solid fa-star"></i>
+                              4.9 (50)
+                            </span>
+                            <span class="service-discount f-700">
+                              <i class="discount-icon fa-solid fa-tag"></i>
+                              $10
+                            </span>
+                            <a class="service-like">
+                              <i class="liked fa-solid fa-heart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="card">
+                    <div class="row g-0">
+                      <div class="col-12 col-sm-4 col-lg-12 col-xl-4">
+                        <div class="service-img" data-img="images/service-img.png"></div>
+                      </div>
+                      <div class="col-12 col-sm-8 col-lg-12 col-xl-8">
+                        <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-grey f-500">
+                              <i class="gold-star fa-solid fa-star"></i>
+                              4.9 (50)
+                            </span>
+                            <span class="service-discount f-700">
+                              <i class="discount-icon fa-solid fa-tag"></i>
+                              $10
+                            </span>
+                            <a class="service-like">
+                              <i class="liked fa-solid fa-heart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Suggested Services -->
+          <div class="col-12">
+            <div class="suggested-services my-5">
+              <div class="header">
+                <h2 class="main-h2">Suggested Services</h2>
+                <a class="text-decoration-none f-400 text-meduim-grey" href="javascript:void(0)"
+                  aria-label="See All Services">See more</a>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3 my-3">
+                  <div class="service card">
+                    <a class="service-like liked" href="javascript:void(0)" aria-label="Like Service">
+                      <i class="fa-solid fa-heart"></i>
+                    </a>
+                    <img src="images/service-img.png" class="card-img-top" alt="Service Image">
+                    <div class="card-body">
+                      <p class="card-text f-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                      <span class="text-grey f-500">
+                        <i class="gold-star fa-solid fa-star"></i>
+                        4.9
+                      </span>
+                      <span class="text-grey f-500">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        300
+                      </span>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="d-flex align-items-center">
+                          <img src="images/posteravatar-2.png" alt="User Avatar">
+                          <h4 class="card-title mb-0 ms-2">Jane Smith</h4>
+                        </div>
+                        <span class="service-discount f-700">
+                          <i class="discount-icon fa-solid fa-tag"></i>
+                          $10
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 my-3">
+                  <div class="service card">
+                    <a class="service-like" href="javascript:void(0)" aria-label="Like Service">
+                      <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <img src="images/service-img.png" class="card-img-top" alt="Service Image">
+                    <div class="card-body">
+                      <p class="card-text f-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                      <span class="text-grey f-500">
+                        <i class="gold-star fa-solid fa-star"></i>
+                        4.9
+                      </span>
+                      <span class="text-grey f-500">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        300
+                      </span>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="d-flex align-items-center">
+                          <img src="images/posteravatar-2.png" alt="User Avatar">
+                          <h5 class="card-title mb-0 ms-2">Jane Smith</h5>
+                        </div>
+                        <span class="service-discount f-700">
+                          <i class="discount-icon fa-solid fa-tag"></i>
+                          $10
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 my-3">
+                  <div class="service card">
+                    <a class="service-like" href="javascript:void(0)" aria-label="Like Service">
+                      <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <img src="images/service-img.png" class="card-img-top" alt="Service Image">
+                    <div class="card-body">
+                      <p class="card-text f-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                      <span class="text-grey f-500">
+                        <i class="gold-star fa-solid fa-star"></i>
+                        4.9
+                      </span>
+                      <span class="text-grey f-500">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        300
+                      </span>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="d-flex align-items-center">
+                          <img src="images/posteravatar-2.png" alt="User Avatar">
+                          <h5 class="card-title mb-0 ms-2">Jane Smith</h5>
+                        </div>
+                        <span class="service-discount f-700">
+                          <i class="discount-icon fa-solid fa-tag"></i>
+                          $10
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 my-3">
+                  <div class="service card">
+                    <a class="service-like" href="javascript:void(0)" aria-label="Like Service">
+                      <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <img src="images/service-img.png" class="card-img-top" alt="Service Image">
+                    <div class="card-body">
+                      <p class="card-text f-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                      <span class="text-grey f-500">
+                        <i class="gold-star fa-solid fa-star"></i>
+                        4.9
+                      </span>
+                      <span class="text-grey f-500">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        300
+                      </span>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="d-flex align-items-center">
+                          <img src="images/posteravatar-2.png" alt="User Avatar">
+                          <h5 class="card-title mb-0 ms-2">Jane Smith</h5>
+                        </div>
+                        <span class="service-discount f-700">
+                          <i class="discount-icon fa-solid fa-tag"></i>
+                          $10
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts  -->
+  <!-- JQuery Library  -->
+  <script src='js/jquery_3.7.1.min.js'></script>
+  <!-- Popper Js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+    integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Boostrap Library -->
+  <script src='js/bootstrap_5.3.2.min.js'></script>
+  <!-- Fontawesome Library -->
+  <script src="js/all.min.js"></script>
+  <!-- Slick JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'
+    integrity='sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=='
+    crossorigin='anonymous'></script>
+  <!-- Custom Js  -->
+  <script src="js/custom.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.slick-slider').slick({
+        infinite: false,
+        dots: true,
+        prevArrow: '.custom-arrow.prev',
+        nextArrow: '.custom-arrow.next',
+      });
+    });
+
+    const minusButton = document.querySelector('.minus');
+    const plusButton = document.querySelector('.plus');
+    const quantityInput = document.getElementById('quantity');
+    const totalPriceSpan = document.getElementById('total');
+
+    const pricePerUnit = 100; // Set your desired price per unit here
+
+    // // Update total price when quantity changes
+    // quantityInput.addEventListener('change', function() {
+    //   const quantity = parseInt(quantityInput.value);
+    //   if (quantity < 1) {
+    //     quantityInput.value = 1; // Ensure minimum quantity is 1
+    //   }
+    //   const totalPrice = quantity * pricePerUnit;
+    //   totalPriceSpan.textContent = totalPrice;
+    // });
+
+    // Increment quantity on plus button click
+    plusButton.addEventListener('click', function () {
+      const quantity = parseInt(quantityInput.value) + 1;
+      quantityInput.value = quantity;
+      const totalPrice = quantity * pricePerUnit;
+      totalPriceSpan.textContent = totalPrice;
+    });
+
+    // Decrement quantity on minus button click (with minimum check)
+    minusButton.addEventListener('click', function () {
+      const quantity = parseInt(quantityInput.value) - 1;
+      if (quantity < 1) {
+        quantity = 1; // Prevent negative quantity
+      }
+      quantityInput.value = quantity;
+      const totalPrice = quantity * pricePerUnit;
+      totalPriceSpan.textContent = totalPrice;
+    });
+
+  </script>
+</body>
+
+</html>
